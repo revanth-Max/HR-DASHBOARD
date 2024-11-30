@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>VAARUSH TECHNOLOGIES Dashboard</h1>
+        <div class="profile">
+            <img src="images/profile.webp" alt="Admin Profile">
+            <span>Admin</span>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="employee.html">Employees</a></li>
+                <li><a href="leave.html">Leave Requests</a></li>
+                <li><a href="performance.html">Performance</a></li>
+                <li><a href="payroll.html">Payroll</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <section class="cards">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p id="total-employees">50</p>
+            </div>
+            <div class="card">
+                <h3>Leave Requests</h3>
+                <p id="leave-requests">12</p>
+            </div>
+            <div class="card">
+                <h3>Pending Reviews</h3>
+                <p id="pending-reviews">5</p>
+            </div>
+        </section>
+        <section class="details"><br>
+            <h2>Employee Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employee-table">
+                    <tr>
+                        <td>101</td>
+                        <td>ravi varma</td>
+                        <td>java developer</td>
+                        <td>Active</td>
+                        <td><button class="view-button" data-id="101" href="employee-details.html">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>ramaraju</td>
+                        <td>web eveloper</td>
+                        <td>active</td>
+                        <td><button class="view-button" data-id="102" href="employee-details.html" >View</button></td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>siva varma</td>
+                        <td>java developer</td>
+                        <td>Active</td>
+                        <td><button class="view-button" data-id="103" href="employee-details.html">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>naresh</td>
+                        <td>web eveloper</td>
+                        <td>On Leave</td>
+                        <td><button class="view-button" data-id="104" href="employee-details.html">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>105</td>
+                        <td>eswar veer</td>
+                        <td>python developer</td>
+                        <td>Active</td>
+                        <td><button class="view-button" data-id="105" href="employee-details.html">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>106</td>
+                        <td>dhanunjai</td>
+                        <td>project manager</td>
+                        <td>active</td>
+                        <td><button class="view-button" data-id="106" href="employee-details.html">View</button></td>
+                    </tr>
+                   
+                    <!-- Repeat rows as needed -->
+                </tbody>
+            </table>
+        </section>
+        
+      
+        
+   
+    <script src="style.js"></script>
+</body>
+</html>

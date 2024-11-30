@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <div id="employee-details">
+        <!-- Employee details will be populated here -->
+    </div>
+
+    <script>
+        // Get the employee ID from the URL
+        const params = new URLSearchParams(window.location.search);
+        const employeeId = params.get('id');
+
+        // Example employee data (replace with real API or database integration)
+        const employees = {
+            "101": { name: "ravi varma", department: "java developer", status: "Active", email: "ravivarma892@gmail.com" },
+            "102": { name: "ramaraju", department: "web developer", status: "active", email: "ramarajut@gmail.com" },
+            "103": { name: "siva varma", department: "python developer", status: "Active", email: "ravivarma892@gmail.com" },
+            "104": { name: "naresh", department: "web developer", status: "Active", email: "ravivarma892@gmail.com" },
+            "105": { name: "eswar veer", department: "python developer", status: "Active", email: "ravivarma892@gmail.com" },
+            "106": { name: "dhanunjai", department: "project manager", status: "Active", email: "ravivarma892@gmail.com" }  
+        };
+
+        // Populate the employee details
+        const employeeDetailsDiv = document.getElementById('employee-details');
+        if (employees[employeeId]) {
+            const employee = employees[employeeId];
+            employeeDetailsDiv.innerHTML = `
+                <p><strong>ID:</strong> ${employeeId}</p>
+                <p><strong>Name:</strong> ${employee.name}</p>
+                <p><strong>Department:</strong> ${employee.department}</p>
+                <p><strong>Status:</strong> ${employee.status}</p>
+                <p><strong>Email:</strong> ${employee.email}</p>
+            `;
+        } else {
+            employeeDetailsDiv.innerHTML = '<p>Employee not found.</p>';
+        }
+    </script>
+</body>
+</html>

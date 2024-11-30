@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>VAARUSH TECHNOLOGIES Dashboard</h1>
+        <div class="profile">
+            <img src="images/profile.webp" alt="Admin Profile">
+            <span>Admin</span>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="employee.html">Employees</a></li>
+                <li><a href="leave.html">Leave Requests</a></li>
+                <li><a href="performance.html">Performance</a></li>
+                <li><a href="payroll.html">Payroll</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <section class="cards">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p id="total-employees">50</p>
+            </div>
+            <div class="card">
+                <h3>Leave Requests</h3>
+                <p id="leave-requests">12</p>
+            </div>
+            <div class="card">
+                <h3>Pending Reviews</h3>
+                <p id="pending-reviews">5</p>
+            </div>
+        </section>
+
+       
+        <section class="details"><br>
+            <h2>Leave Requests</h2><br>
+            <div class="leave-actions">
+                <button class="add-leave-btn">Add Leave Request</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Department</th>
+                        <th>Leave Type</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="leave-requests-table">
+                    <tr>
+                        <td>ravi varma</td>
+                        <td>java developer</td>
+                        <td>Sick Leave</td>
+                        <td>2024-11-25</td>
+                        <td>2024-11-28</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>
+                            <button class="approve-btn">Approve</button>
+                            <button class="reject-btn">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ramaraju</td>
+                        <td>web developer</td>
+                        <td>Vacation</td>
+                        <td>2024-12-01</td>
+                        <td>2024-12-10</td>
+                        <td><span class="status approved">Approved</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>naresh</td>
+                        <td>HR</td>
+                        <td>Maternity Leave</td>
+                        <td>2024-12-15</td>
+                        <td>2025-01-15</td>
+                        <td><span class="status rejected">Rejected</span></td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="style.js"></script>
+</body>
+</html>

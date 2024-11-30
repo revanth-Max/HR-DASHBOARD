@@ -1,0 +1,275 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #918b8b;
+    color: #eaeaea;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #141414;
+    color: #eaeaea;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slide-down 0.8s ease-out;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+}
+
+header .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #eaeaea;
+}
+
+/* Sidebar */
+aside {
+    width: 220px;
+    background-color: #4a4a4a;
+    color: #eaeaea;
+    padding: 2rem 1rem;
+    height: 100vh;
+    position: fixed;
+    top: 70px;
+    overflow-y: auto;
+    animation: fade-in 0.8s ease-in;
+}
+
+aside nav ul {
+    list-style: none;
+}
+
+aside nav ul li {
+    margin: 1.5rem 0;
+}
+
+aside nav ul li a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+aside nav ul li a:hover {
+    color: #0ef3db;
+}
+
+/* Main Content */
+main {
+    margin-left: 240px;
+    margin-top: 70px;
+    padding: 2rem;
+    flex: 1;
+    animation: fade-in 1s ease-in;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #4a4a4a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #e4eae9;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #0f3460;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color:#4a4a4a;
+    color: #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: slide-up 1s ease-out;
+}
+
+table th,
+table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #0f3460;
+}
+
+table th {
+    background-color: #080808;
+    color: #e4eae9;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+table th:hover {
+    background-color: #0e213c;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+.status {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.status.paid {
+    background-color: #0f3460;
+    color:  #e4eae9;
+}
+
+.status.pending {
+    background-color: #e0a800;
+    color: #1a1a2e;
+}
+
+.status.approved {
+    background-color: #0e9f6e;
+    color: #1a1a2e;
+}
+
+.status.rejected {
+    background-color: #d9534f;
+    color: #1a1a2e;
+}
+
+/* Buttons */
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.approve-btn {
+    background-color: #0e9f6e;
+    color: #fff;
+}
+
+.approve-btn:hover {
+    background-color: #0b6e50;
+}
+
+.reject-btn {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.reject-btn:hover {
+    background-color: #b52c2b;
+}
+
+/* Forms */
+form {
+    background-color: #918b8b;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    animation: slide-up 0.8s ease-out;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #0f3460;
+    border-radius: 5px;
+    background-color: #1a1a2e;
+    color: #eaeaea;
+    transition: border 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color:  #e4eae9;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

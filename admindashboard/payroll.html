@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>VAARUSH TECHNOLOGIES Dashboard</h1>
+        <div class="profile">
+            <img src="images/profile.webp" alt="Admin Profile">
+            <span>Admin</span>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="employee.html">Employees</a></li>
+                <li><a href="leave.html">Leave Requests</a></li>
+                <li><a href="performance.html">Performance</a></li>
+                <li><a href="payroll.html">Payroll</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+       
+        <section class="details"><br>
+            <h2>Payroll Management</h2><br>
+            <div class="payroll-actions">
+                <button class="add-payroll-btn">Add Payroll</button>
+                <button class="export-payroll-btn">Export Data</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Payment Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="payroll-table">
+                    <tr>
+                        <td>ravi varma</td>
+                        <td>java developer</td>
+                        <td>₹5,000</td>
+                        <td>2024-11-28</td>
+                        <td><span class="status paid">Paid</span></td>
+                    </tr>
+                    <tr>
+                        <td>rama raju</td>
+                        <td>web developer</td>
+                        <td>₹4,500</td>
+                        <td>2024-11-28</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>naresh</td>
+                        <td>web developer</td>
+                        <td>₹4,800</td>
+                        <td>2024-11-28</td>
+                        <td><span class="status paid">Paid</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="style.js"></script>
+</body>
+</html>
